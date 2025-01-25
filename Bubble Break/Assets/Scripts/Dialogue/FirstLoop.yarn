@@ -1,0 +1,77 @@
+﻿title:FirstLoop
+---
+Whenever you wash you hands...
+a bubble is born...
+But this one is special.
+It never popped!
+And look over there... a fellow bubble?
+<i>She's kinda cute...</i>
+Lets talk to her!
+
+
+???: Huh?
+???: !! Another bubble!?
+
+-> Who are you?
+-> Another bubble?
+	???: I've never seen another bubble here before.
+	???: At least, not long enough for me to talk to it.
+
+Spring: My name's Spring.
+Spring: This sink has just been me for a couple days now. It was getting pretty lonely.
+Spring: So... Uh... Do you have a name?
+
+-> No.
+	Spring: Oh.
+	Spring: Uh...
+-> Umm...
+	Spring: Oh! Sorry, that was insensitive of me, huh.
+	Spring: After all, you did <b>just</b> get here.
+
+Spring: Do you want one?
+
+<<ChangeSprite GameManager exclamation>>
+-> No.
+    <<ChangeSprite GameManager sad>>
+	Spring: S-sorry...
+	Spring: ... What should I call you though?
+<<ChangeSprite GameManager question>>
+-> ...
+    <<ChangeSprite GameManager sad>>
+	Spring: ...
+	Spring: Uhh...
+
+<<ChangeSprite GameManager neutral>>
+<<ChangeSprite GameManager normal>>
+Spring: How about I give you one then!
+Spring: Hmmm... How aboouuut....
+Spring: Bub!!
+Spring: Cute, right? I'm pretty good at giving names.
+
+-> Thanks?
+	Spring: ... You don't sound super sure...
+	Spring: I can't really think of anything else, though...
+	Spring: .. Welcome to the world, Bub!
+-> Errm...
+	Spring: Not a fan?
+	Spring: But I really can't think of anything else...
+	Spring: Bubba? Bubbly? Bubba-Wubba?
+		-> ... Bub is fine.
+            <<AffectionEffect GameManager 5>>
+			Spring: Yippee!! I knew you would come around!
+			Spring: Welcome to the world, Bub!
+
+Spring: I'm really excited to get to know you more!
+Spring: ...
+Spring: ... Hmm...
+Spring: There's not much to say when you're a bubble, huh?
+
+-> ...
+
+Spring: ...
+Spring: Sorry... I'm usually pretty good at conversation... 
+Spring: Huh? Are you shaking?
+Spring: You don't look great. Do you want me to get you anything?
+Spring: Bub? Bub!!??
+
+===

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StageSet : MonoBehaviour
 {
     public int currStage;
+    public AffectionBar affBar;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class StageSet : MonoBehaviour
         switch (currStage)
         {
             case 1:
+                //affBar.ShowBar();
             break;
             case 2:
             break;

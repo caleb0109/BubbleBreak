@@ -5,11 +5,12 @@ Maybe she can hear me?
 ???: Can you hear me?
 
 -> Yeah I can hear you!
-    <<AffectionEffect GameManager 10>>
+    <<AffectionEffect GameManager 5>>
     ???: Hi! <i>Where are you?</i>
 -> Nah, you're stuck..
     ???: Welp, at least there was a <b>reply</b>
 -> What's you name?
-    Spring: My name is <b>Spring</b>
+
+Spring: My name is <b>Spring</b>
     
 ===

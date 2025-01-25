@@ -33,6 +33,7 @@ public class StressAndAffection : MonoBehaviour
     {
         affection += add;
         affBar.curr = affection;
+        //affBar.ShowBar();
         Debug.Log("yes");
     }
 
