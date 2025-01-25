@@ -1,0 +1,12 @@
+﻿title: SpringTest
+---
+Spring: Does this work?
+Spring: Can you hear me?
+
+-> Yeah I can hear you!
+    Spring: Hi! Where are you?
+    {AffectionEffect(10)}
+-> Nah, you're stuck..
+    Spring: Welp, at least there was a <b>reply</b>
+    
+===

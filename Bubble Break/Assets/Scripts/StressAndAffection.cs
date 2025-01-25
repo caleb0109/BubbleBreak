@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class StressAndAffection : MonoBehaviour
 {
@@ -21,13 +22,11 @@ public class StressAndAffection : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            AffectionEffect(10);
-        }
+
     }
     
-    public void StressEffect (int add)
+    [YarnFunction("StressEffect")]
+    public static StressEffect (int add, int )
     {
         stress += add;
         if(stress <= 0)
@@ -36,16 +35,20 @@ public class StressAndAffection : MonoBehaviour
         }
         else if (stress >= 100)
         {
+            return stress;
             stress = 0;
             affection = 0;
             stage.StageReset();
         }
+        return stress;
     } 
 
-    void AffectionEffect (int add)
+    [YarnFunction("AffectionEffect")]
+    public static AffectionEffect (int add)
     {
         affection += add;
         affBar.curr = affection;
+        return affection;
 
     }
 
