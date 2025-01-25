@@ -1,12 +1,15 @@
 ﻿title: SpringTest
 ---
-Spring: Does this work?
-Spring: Can you hear me?
+???: Does this work?
+Maybe she can hear me?
+???: Can you hear me?
 
 -> Yeah I can hear you!
-    Spring: Hi! Where are you?
-    {AffectionEffect(10)}
+    <<AffectionEffect GameManager 10>>
+    ???: Hi! <i>Where are you?</i>
 -> Nah, you're stuck..
-    Spring: Welp, at least there was a <b>reply</b>
+    ???: Welp, at least there was a <b>reply</b>
+-> What's you name?
+    Spring: My name is <b>Spring</b>
     
 ===

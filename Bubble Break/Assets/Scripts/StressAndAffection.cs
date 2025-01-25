@@ -13,20 +13,7 @@ public class StressAndAffection : MonoBehaviour
     private int stage2Check = 50;
     private int stage3Check = 100;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    private void Update()
-    {
-
-    }
-    
-    [YarnFunction("StressEffect")]
-    public static StressEffect (int add, int )
+    public void StressEffect (int add )
     {
         stress += add;
         if(stress <= 0)
@@ -35,21 +22,20 @@ public class StressAndAffection : MonoBehaviour
         }
         else if (stress >= 100)
         {
-            return stress;
             stress = 0;
             affection = 0;
             stage.StageReset();
         }
-        return stress;
     } 
 
-    [YarnFunction("AffectionEffect")]
-    public static AffectionEffect (int add)
+    [YarnCommand("AffectionEffect")]
+    public void AffectionEffect (int add)
     {
         affection += add;
         affBar.curr = affection;
-        return affection;
-
+        Debug.Log("yes");
     }
 
 }
+
+
