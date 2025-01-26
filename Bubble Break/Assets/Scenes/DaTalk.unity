@@ -336,7 +336,7 @@ MonoBehaviour:
   bStress2: {fileID: 21300000, guid: 290faffb13efed344a8f278692290213, type: 3}
   bStress3: {fileID: 21300000, guid: b93fd99594526fd418f40bfa555e0a3e, type: 3}
   narr: {fileID: 21300000, guid: a11660df0a39bbb49b0f956f0080c2c1, type: 3}
-  springAnim: {fileID: 2057673339}
+  springObj: {fileID: 2057673337}
 --- !u!114 &642058540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +972,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2057673339}
   m_SourcePrefab: {fileID: 100100000, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
+--- !u!1001 &6365222606174130118
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1102.4128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 579.4476
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0301046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778732952132936719, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896048063742743742, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
+      propertyPath: m_Name
+      value: Audio Source
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4e9ba54eb4641d4db4dfd139e91b763, type: 3}
 --- !u!114 &9142954252311936846 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5867882816960705309, guid: 43313cf91093ed54cac243ade55ee39f, type: 3}
@@ -990,3 +1047,4 @@ SceneRoots:
   - {fileID: 150169733}
   - {fileID: 2796145488655117183}
   - {fileID: 642058536}
+  - {fileID: 6365222606174130118}
