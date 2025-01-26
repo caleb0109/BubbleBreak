@@ -2,10 +2,13 @@
 ---
 <<AllReset GameManager>>
 Way to go, champ! She seems interested!
-One more push and maybe you'll catch her eye... Not that you have much competition.
-You know her better now, so maybe put yourself out there! Can't hurt to try, right...?
+One more push and maybe you'll catch her eye...
+Not that you have much competition.
+You know her better now, so maybe put yourself out there!
+Can't hurt to try, right...?
 You got this, alright?
 <<ChangeSprite GameManager bNeutral>>
+<<NextScene GameManager off>>
 <<jump ThirdLoop>>
 ===
 title: ThirdLoop
@@ -15,7 +18,7 @@ title: ThirdLoop
 Spring: Bub? Bub!!!
 Spring: It's been a while... I really thought you might never come back!!
 <<ChangeSprite GameManager sad>>
-Spring: I got so used to having a talking buddy that it felt really lonely while you were gone.
+Spring: I got so used to having a buddy that it felt really lonely while you were gone.
 <<ChangeSprite GameManager happy>>
 Spring: But you're back!! Yippee!!!
 
@@ -33,7 +36,6 @@ Spring: But you're back!! Yippee!!!
 		-> A whole week, huh.
 			<<ChangeSprite GameManager sad>>
 			Spring: Yup! Slipping and sliding gets really boring after a week.
-			<<ChangeSprite GameManager worry>>
 			Spring: I almost slipped out of the sink! I could've popped!!
 			Spring: Then I wouldn't have been able to see you!			
 -> I missed you!
@@ -48,7 +50,8 @@ Spring: But you're back!! Yippee!!!
 
 <<ChangeSprite GameManager neutral>>
 Spring: I'm really glad I got to say your name again.
-Spring: I got tired of greeting everyone around here. And you're the only one that actually says something back!
+Spring: I got tired of greeting everyone around here. 
+Spring: And you're the only one that actually says something back!
 
 -> Who's the other people?
 	Spring: There's Toothy the toothpaste, Clara the cleanser, Flafla the floss...
@@ -120,7 +123,8 @@ Spring: Do you think we'll ever get out of this sink?
 
 <<ChangeSprite GameManager thinking>>
 Spring: Well, you'll probably make it out of here...
-Spring: When you pop, you always come back! Maybe one day you'll land somewhere outside of the sink!
+Spring: When you pop, you always come back! 
+Spring: Maybe one day you'll land somewhere outside of the sink!
 Spring: Me, on the other hand...
 <<ChangeSprite GameManager sad>>
 Spring: ...
@@ -150,22 +154,29 @@ Spring: To the tile floor, the bathtub... maybe even outside the window!!!
 Spring: ...
 Spring: I really like you, Bub.
 Spring: D-do you feel the same...?
-	-> Yeah!
-		<<ChangeSprite GameManager happy>>
-		Spring: !!!
-        <<NextScene GameManager finale>>
-		Spring: Y-yay!! I've never felt this way before...!
-		Spring: Hehe... I hope you know you mean a lot to me!
-		Spring: Lets explore this new world... together!!!
-	-> Maybe...?
-		<<ChangeSprite GameManager thinking>>
-		Spring: Maybe?
-		<<ChangeSprite GameManager neutral>>
-		Spring: Well... that's not a no, right?
-		<<ChangeSprite GameManager happy>>
-		Spring: Ahaha! Well, regardless, I think we'll have a lot of fun!!
+
+// -> Maybe...?
+// 	<<ChangeSprite GameManager thinking>>
+// 	Spring: Maybe?
+// 	<<ChangeSprite GameManager neutral>>
+// 	Spring: Well... that's not a no, right?
+// 	<<ChangeSprite GameManager happy>>
+// 	Spring: Ahaha! Well, regardless, I think we'll have a lot of fun!!
+-> Yeah!
+	<<ChangeSprite GameManager happy>>
+	Spring: !!!
+    <<NextScene GameManager finale>>
+	Spring: Y-yay!! I've never felt this way before...!
+	Spring: Hehe... I hope you know you mean a lot to me!
+	Spring: Lets explore this new world... together!!!
+
 Spring: C'mon! Lets get out of here!
 <<NextScene GameManager end>>
+<<ChangeSprite GameManager narr>>
+<<wait 5>>
+Press space to loop back to the beginning!
+<<NextScene GameManager off>>
+<<jump FirstLoop>>
 ===
 
 title: Loop3AffectionFail
@@ -176,7 +187,6 @@ Spring: Uhh... like, right now??
 Spring: ...
 <<ChangeSprite GameManager sad>>
 Spring: Sorry... I ... I don't think I can just leave like that!!
-<<ChangeSprite GameManager worry>>
 Spring: I know I haven't popped yet, but sliding off of the sink!? That's a huge risk!!
 Spring: Plus, we don't know if I can just come back like you do! 
 <<ChangeSprite GameManager sad>>
@@ -187,11 +197,16 @@ Spring: Can't we just stay here... and talk...?
 Spring: No!! Not now...!!
 Spring: I just wanted to be with you more!!!
 Spring: ...
+<<BlackBackground GameManager on>>
 Spring: ... please come back?
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
-...
 <<BlackBackground GameManager on>> 
+...
 <<jump Loop3Fail>>
+===
 
 title: Loop3ChoiceFail
 ---
@@ -205,10 +220,14 @@ Spring: ... huh?
 Spring: Oh no... wait... not now!!
 Spring: I... don't want you to remember me like this...
 Spring: Come back, pretty please?
+<<BlackBackground GameManager on>>
 Spring: Lets talk about something nicer next time!
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
-...
 <<BlackBackground GameManager on>> 
+...
 <<jump Loop3Fail>>
 ===
 
@@ -221,7 +240,11 @@ Spring: I want to keep talking with you...
 <<ChangeSprite GameManager neutral>>
 Spring: We'll meet again though.
 <<ChangeSprite GameManager happy>>
+<<BlackBackground GameManager on>>
 Spring: I'm sure of it!
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
 ...
 <<BlackBackground GameManager on>> 
@@ -230,6 +253,7 @@ Spring: I'm sure of it!
 
 title: Loop3Fail
 ---
+<<NextScene GameManager off>>
 <<AllReset GameManager>>
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
@@ -237,13 +261,13 @@ title: Loop3Fail
 <<ChangeSprite GameManager narr>>
 You messed up. Again.
 I think she's kinda into you, don't you think?
-Just go for it!! But you're not stupid enough to pick something <i>too</i> risque, right?
+Just go for it!!
+But you're not stupid enough to pick something <i>too</i> risque, right?
 It could also help to bring up some stuff you learned about her last time!
 Look! Another bubble!
 Lets try again, yeah?
 <<BlackBackground GameManager off>>
 <<jump ThirdLoop>>
-
 ===
 
 

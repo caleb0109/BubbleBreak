@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 26880f74aee7f704390adb6a04f6d085, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d773a6e30b497e340855c481307ef226, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1282,11 +1282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6192563625666128300, guid: 43313cf91093ed54cac243ade55ee39f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -504
+      value: -499
       objectReference: {fileID: 0}
     - target: {fileID: 6192563625666128300, guid: 43313cf91093ed54cac243ade55ee39f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -73
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: 6192563625666128300, guid: 43313cf91093ed54cac243ade55ee39f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1426,6 +1426,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 47.024704
       objectReference: {fileID: 0}
+    - target: {fileID: 1093829739819541089, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093829739819541089, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 1093829739819541102, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1484,7 +1492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1144885026407927706, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -44
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 1403292937419079771, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
       propertyPath: m_Enabled

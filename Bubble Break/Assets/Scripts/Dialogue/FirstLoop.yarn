@@ -1,6 +1,9 @@
 ﻿title:FirstLoop
 ---
+<<AllReset GameManager>>
 <<ChangeSprite GameManager narr>>
+<<ChangeSprite GameManager bNeutral>>
+<<ChangeSprite GameManager neutral>>
 <<NextScene GameManager cut1>>
 Whenever you wash you hands...
 <<NextScene GameManager cut2>>
@@ -9,15 +12,12 @@ a bubble is born...
 But this one is special.
 
 It never popped!
-<<ChangeSprite GameManager sOut>>
 <<NextScene GameManager cut4>>
 And look over there... a fellow bubble?
 <i>She's kinda cute...</i>
 Lets talk to her!
 
 <<NextScene GameManager off>>
-
-<<ChangeSprite GameManager sIn>>
 <<ChangeSprite GameManager normal>>
 ???: Huh?
 <<ChangeSprite GameManager happy>>
@@ -32,7 +32,8 @@ Lets talk to her!
 <<ChangeSprite GameManager happy>>
 Spring: My name's Spring.
 <<ChangeSprite GameManager sad>>
-Spring: This sink has just been me for a couple days now. It was getting pretty lonely.
+Spring: This sink has just been me for a couple days now. 
+Spring: It was getting pretty lonely.
 <<ChangeSprite GameManager neutral>>
 Spring: So... Uh... Do you have a name?
 
@@ -49,7 +50,6 @@ Spring: So... Uh... Do you have a name?
 <<ChangeSprite GameManager neutral>>
 Spring: Do you want one?
 
-<<ChangeSprite GameManager exclamation>>
 -> No. 
     <<ChangeSprite GameManager sad>>
 	Spring: S-sorry...
@@ -110,7 +110,7 @@ Spring: Bub? Bub!!??
 <<BlackBackground GameManager off>>
 <<NextScene GameManager cut5>>
 <b><i>P O P</b></i>
-<<NextScene GameManager end>>
+<<NextScene GameManager off>>
 <<BlackBackground GameManager on>> 
 ...
 

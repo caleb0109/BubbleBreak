@@ -97,16 +97,6 @@ public class SpriteChanger : MonoBehaviour
                 springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
-            case "sOut":
-            {
-                spring.enabled = false;
-                break;
-            }
-            case "sIn":
-            {
-                spring.enabled = true;
-                break;
-            }
             case "exclamation":
             {
                 diaImg.sprite = exclamation;
