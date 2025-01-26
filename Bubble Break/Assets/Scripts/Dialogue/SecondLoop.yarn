@@ -113,9 +113,8 @@ Spring: I reached the faucet once, though! How cool is that!!
 		<<AffectionEffect GameManager 10>>
 		Spring: I just kept gaining momentum!
 		Spring: It was super tiring, but well worth it! I even got to see all the stuff up there!
-		<<ChangeSprite GameManager neutral>>
+		<<ChangeSprite GameManager thinking>>
 		Spring: There was peppermint toothpaste, facial cleanser, moisturizer... but no floss! Gross, right?
-		<<ChangeSprite GameManager disgust>>
 		Spring: I really pity their dentist.
 
 <<ChangeSprite GameManager neutral>>
@@ -143,8 +142,8 @@ Spring: I wonder why...
 	-> Do you want to get popped?
 		<<ChangeSprite GameManager neutral>>
 		Spring: No! I'm enjoying my bubbble life so far!
-		<<ChangeSprite GameManager sad>>
-		Spring: It's kinda spooky, though. Especially when the sun goes down.
+		<<ChangeSprite GameManager thinking>>
+		Spring: It can get pretty spooky, though. Especially when the sun goes down.
 		Spring: It's pitch black, and I can barely sleep because I keep hearing squeaking and skittering!
 		<<ChangeSprite GameManager disgust>>
 		Spring: They should really invest in some mice traps.

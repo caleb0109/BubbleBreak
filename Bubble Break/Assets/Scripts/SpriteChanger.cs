@@ -39,6 +39,8 @@ public class SpriteChanger : MonoBehaviour
 
     //narrator text bubble
     public Sprite narr;
+
+    public GameObject springObj;
     
 
     // Start is called before the first frame update
@@ -50,7 +52,7 @@ public class SpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        springObj.transform.localScale = new Vector3(1.440132f,1.440132f,1.440132f);
     }
 
     [YarnCommand("ChangeSprite")]
@@ -62,31 +64,37 @@ public class SpriteChanger : MonoBehaviour
             case "sad":
             {
                 spring.sprite = sad;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "blush":
             {
                 spring.sprite = blush;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "happy":
             {
                 spring.sprite = happy;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "thinking":
             {
                 spring.sprite = thinking;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "disgust":
             {
                 spring.sprite = disgust;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "worry":
             {
                 spring.sprite = worry;
+                springObj.GetComponent<Animator>().enabled = false;
                 break;
             }
             case "sOut":
@@ -147,6 +155,7 @@ public class SpriteChanger : MonoBehaviour
             default:
             {
                 spring.sprite = neutral;
+                springObj.GetComponent<Animator>().enabled = true;
                 break;
             }
             
