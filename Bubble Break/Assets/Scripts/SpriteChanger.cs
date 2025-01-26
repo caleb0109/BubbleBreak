@@ -10,11 +10,21 @@ public class SpriteChanger : MonoBehaviour
     //public Sprite angry;
     public Image spring;
     public Image diaImg;
+    public Image bub;
+    public Image backgroundBlack;
+
     public Sprite neutral;
     public Sprite sad;
     public Sprite exclamation;
     public Sprite question;
     public Sprite normal;
+    public Sprite bNormal;
+    public Sprite bNeutral;
+    public Sprite bStress1;
+    public Sprite bStress2;
+    public Sprite bStress3;
+    public Sprite narr;
+    
 
 
     private string curr;
@@ -56,12 +66,46 @@ public class SpriteChanger : MonoBehaviour
                 diaImg.sprite = normal;
                 break;
             }
+            case "bNormal":
+            {
+                diaImg.sprite = bNormal;
+                break;
+            }
+            case "narr":
+            {
+                diaImg.sprite = narr;
+                break;
+            }
             default:
             {
                 spring.sprite = neutral;
                 break;
             }
             
+        }
+    }
+
+    [YarnCommand("BlackBackground")]
+    public void BlackBackground(string state)
+    {
+        curr = state;
+        switch(curr)
+        {
+            case "on":
+            {
+                backgroundBlack.enabled = true;
+                break;
+            }
+            case "off":
+            {
+                backgroundBlack.enabled = false;
+                break;
+            }
+            default:
+            {
+                backgroundBlack.enabled = false;
+                break;
+            }
         }
     }
 }

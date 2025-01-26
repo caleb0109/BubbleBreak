@@ -1,14 +1,18 @@
 ﻿title:FirstLoop
 ---
+<<ChangeSprite GameManager narr>>
+<<BlackBackground GameManager on>>
 Whenever you wash you hands...
 a bubble is born...
 But this one is special.
 It never popped!
+<<BlackBackground GameManager off>>
 And look over there... a fellow bubble?
 <i>She's kinda cute...</i>
 Lets talk to her!
 
 
+<<ChangeSprite GameManager normal>>
 ???: Huh?
 ???: !! Another bubble!?
 
@@ -31,7 +35,7 @@ Spring: So... Uh... Do you have a name?
 Spring: Do you want one?
 
 <<ChangeSprite GameManager exclamation>>
--> No.
+-> No. 
     <<ChangeSprite GameManager sad>>
 	Spring: S-sorry...
 	Spring: ... What should I call you though?
@@ -72,6 +76,8 @@ Spring: ...
 Spring: Sorry... I'm usually pretty good at conversation... 
 Spring: Huh? Are you shaking?
 Spring: You don't look great. Do you want me to get you anything?
+<<BlackBackground GameManager on>>
 Spring: Bub? Bub!!??
 
+<<jump SecondLoop>>
 ===

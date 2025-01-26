@@ -1,0 +1,138 @@
+﻿title: SecondLoop
+---
+<<BlackBackground GameManager on>>
+<<ChangeSprite GameManager narr>>
+You really fumbled that one.
+Maybe ask more questions... y'know, give her something to work with!
+Look! Another bubble!
+Lets try again, yeah?
+<<BlackBackground GameManager off>>
+
+<<ChangeSprite GameManager normal>>
+Spring: ...
+Spring: ... Is that you, Bub?
+Spring: I can't believe it!! You're back!!
+Spring: I was worried sick! You just popped out of nowhere, I thought I would never see you again...
+Spring: Do you know how you came back?
+
+-> I just kinda... did.
+	Spring: Woah... I wonder if I'll come back if I pop...
+-> I don't know, but I'm glad I'm back.
+	//raise affection 10
+	Spring: I'm glad you're back, too.
+
+Spring: ...
+Spring: Hmm...
+
+-> Do you know how long you've been here?
+	Spring: Mmm... A month, I think?
+	Spring: I can see the sun go up and down from the window!
+	Spring: I've seen it go up one, two, three.....
+	Spring: ...
+	Spring: Five times!!
+		-> So, less than a week?
+			Spring: ...
+			//raise affection 10
+			Spring: Oh! I guess you're right!
+			Spring: It feels like a long time when you don't see anyone.
+		-> Right... a month...
+			//lower affection 10, raise stress
+			Spring: !!!
+			Spring: Haha... It feels like a while when you don't see anyone...
+-> You've really never seen anyone else?
+	Spring: Nope! Just you!
+	Spring: Why, are you doubting me?
+		-> Not at all!
+			Spring: Ahaha! It's ok!! You probably should, if I'm being honest.
+			Spring: I don't have the best memory, but I am pretty confident about my answer!
+			Spring: I think I would remember if I had another conversation.
+		-> Yeah.
+			//raise affection 10
+			Spring: Ahaha!! You're right about that!
+			Spring: Do you have a good memory? Maybe you can keep me in check.
+-> ...
+	//lower affection 10, raise stress
+	Spring: Uhh...
+
+Spring: There's not a lot to do when you're a bubble.
+Spring: I like to slip and slide around the sink! But that's kinda it.
+Spring: I reached the faucet once, though! How cool is that!!
+	-> Awesome!
+		Spring: Hehe! Yeah, I get that a lot!
+			-> By who?
+				Spring: Uh... the mirror.....
+			-> I can tell!
+				//raise affection 20
+				Spring: D'aww! You get me so well!!
+	-> Cool...?
+		//lower affection 10, raise stress 
+		Spring: It <b>is</b> cool! Don't look at me like that!
+		Spring: You get bored here, alright! You try figuring out how to spend your time here!
+	-> How did you even do that?
+		//raise affection 10
+		Spring: I just kept gaining momentum!
+		Spring: It was super tiring, but well worth it! I even got to see all the stuff up there!
+		Spring: There was peppermint toothpaste, facial cleanser, moisturizer... but no floss! Gross, right?
+		Spring: I really pity their dentist.
+
+Spring: There were a few times where I thought I would pop, but I'm still here.
+Spring: Like, when someone comes by to wash their hands or brush their teeth, I'm always terrified the running water will pop me...
+Spring: But it never happens!!
+Spring: I wonder why...
+	-> Every bubble will pop eventually.
+		//lower affection 10, raise stress 
+		Spring: You're right... I have to spend my time wisely, huh.
+		Spring: Especially now that you're here! I would hate to pop now that I have a friend!!
+		Spring: At least you seem to come back when you pop... Lucky...
+	-> Do you want to get popped?
+		Spring: No! I'm enjoying my bubbble life so far!
+		Spring: It's kinda spooky, though. Especially when the sun goes down.
+		Spring: It's pitch black, and I can barely sleep because I keep hearing squeaking and skittering!
+		Spring: They should really invest in some mice traps.
+		Spring: ...
+		Spring: I'm really glad I met you, Bub.
+			-> Me too.
+				//raise affection 20
+				Spring: Hehe...
+			-> Thanks.
+				Spring: Yeah!
+	-> I guess you're too powerful...
+		//raise affection 10
+		Spring: You're right... Curse my super strength...
+		Spring: I bet we can have the cleanest high five and I'll still be here! Ahaha!
+===
+
+title: Loop2Success
+---
+Spring: Oh look! The sun's coming down.
+Spring: Y'know... I had a lot of fun today. It's been a while since I really enjoyed myself in this sink.
+Spring: Can we talk again tomorrow?
+	-> Of course
+		Spring: Yay! I don't know if I can sleep tonight!
+	-> We'll see.
+		Spring: Hehe. Well regardless, you're stuck with me until you pop!
+Spring: ??
+Spring: Oh, no... Not again!
+Spring: Wait!! Don't leave me again!!
+Spring: Promise me you'll come back?
+
+===
+
+title: Loop2StressFail
+---
+Spring: Are you feeling alright?
+Spring: Oh no... This again...
+Spring: You'll come back again, right? Right??
+
+===
+
+title: Loop2AffectionFail
+---
+Spring: Hmm....
+Spring: ... 
+Spring: Ahaha... I guess I really am bad at conversations, huh...
+Spring: Huh? You're shaking, are you feeling alright?
+Spring: Oh no... This again...
+Spring: You'll come back again, right? Right??
+
+===		

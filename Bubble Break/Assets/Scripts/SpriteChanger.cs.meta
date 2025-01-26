@@ -3,7 +3,19 @@ guid: b4196d9cc9a8a074a8a56c43f38d625f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spring: {instanceID: 0}
+  - diaImg: {instanceID: 0}
+  - bub: {instanceID: 0}
+  - neutral: {instanceID: 0}
+  - sad: {instanceID: 0}
+  - exclamation: {instanceID: 0}
+  - question: {instanceID: 0}
+  - normal: {instanceID: 0}
+  - bNeutral: {fileID: 21300000, guid: 2800cf3ef7b7abb43b9ac2907cac6082, type: 3}
+  - bStress1: {fileID: 21300000, guid: 7667cfc76e5bd6944b57303e7788e371, type: 3}
+  - bStress2: {fileID: 21300000, guid: 290faffb13efed344a8f278692290213, type: 3}
+  - bStress3: {fileID: 21300000, guid: b93fd99594526fd418f40bfa555e0a3e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
