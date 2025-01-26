@@ -1,5 +1,7 @@
 ﻿title: SecondLoop
 ---
+<<ChangeSprite GameManager bNeutral>>
+<<ChangeSprite GameManager neutral>>
 <<BlackBackground GameManager on>>
 <<ChangeSprite GameManager narr>>
 You really fumbled that one.
@@ -11,6 +13,7 @@ Lets try again, yeah?
 <<ChangeSprite GameManager normal>>
 Spring: ...
 Spring: ... Is that you, Bub?
+<<ChangeSprite GameManager happy>>
 Spring: I can't believe it!! You're back!!
 Spring: I was worried sick! You just popped out of nowhere, I thought I would never see you again...
 Spring: Do you know how you came back?

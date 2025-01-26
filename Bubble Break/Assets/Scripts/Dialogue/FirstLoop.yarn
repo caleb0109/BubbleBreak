@@ -1,37 +1,52 @@
 ﻿title:FirstLoop
 ---
 <<ChangeSprite GameManager narr>>
-<<BlackBackground GameManager on>>
+<<NextScene GameManager cut1>>
 Whenever you wash you hands...
+<<NextScene GameManager cut2>>
 a bubble is born...
+<<NextScene GameManager cut3>>
 But this one is special.
+
 It never popped!
-<<BlackBackground GameManager off>>
+<<ChangeSprite GameManager sOut>>
+<<NextScene GameManager cut4>>
 And look over there... a fellow bubble?
 <i>She's kinda cute...</i>
 Lets talk to her!
 
+<<NextScene GameManager off>>
 
+<<ChangeSprite GameManager sIn>>
 <<ChangeSprite GameManager normal>>
 ???: Huh?
+<<ChangeSprite GameManager happy>>
 ???: !! Another bubble!?
 
 -> Who are you?
 -> Another bubble?
+    <<ChangeSprite GameManager sad>>
 	???: I've never seen another bubble here before.
 	???: At least, not long enough for me to talk to it.
 
+<<ChangeSprite GameManager happy>>
 Spring: My name's Spring.
+<<ChangeSprite GameManager sad>>
 Spring: This sink has just been me for a couple days now. It was getting pretty lonely.
+<<ChangeSprite GameManager neutral>>
 Spring: So... Uh... Do you have a name?
 
 -> No.
+    <<ChangeSprite GameManager sad>>
 	Spring: Oh.
 	Spring: Uh...
 -> Umm...
+    <<ChangeSprite GameManager sad>>
 	Spring: Oh! Sorry, that was insensitive of me, huh.
+    <<ChangeSprite GameManager neutral>>
 	Spring: After all, you did <b>just</b> get here.
 
+<<ChangeSprite GameManager neutral>>
 Spring: Do you want one?
 
 <<ChangeSprite GameManager exclamation>>
@@ -39,7 +54,6 @@ Spring: Do you want one?
     <<ChangeSprite GameManager sad>>
 	Spring: S-sorry...
 	Spring: ... What should I call you though?
-<<ChangeSprite GameManager question>>
 -> ...
     <<ChangeSprite GameManager sad>>
 	Spring: ...
@@ -48,36 +62,55 @@ Spring: Do you want one?
 <<ChangeSprite GameManager neutral>>
 <<ChangeSprite GameManager normal>>
 Spring: How about I give you one then!
+<<ChangeSprite GameManager thinking>>
 Spring: Hmmm... How aboouuut....
+<<ChangeSprite GameManager Happy>>
 Spring: Bub!!
 Spring: Cute, right? I'm pretty good at giving names.
 
 -> Thanks?
+    <<ChangeSprite GameManager sad>>
 	Spring: ... You don't sound super sure...
 	Spring: I can't really think of anything else, though...
+    <<ChangeSprite GameManager bStress1>>
+    <<ChangeSprite GameManager happy>>
 	Spring: .. Welcome to the world, Bub!
 -> Errm...
+    <<ChangeSprite GameManager sad>>
 	Spring: Not a fan?
 	Spring: But I really can't think of anything else...
+    <<ChangeSprite GameManager thinking>>
 	Spring: Bubba? Bubbly? Bubba-Wubba?
+    <<ChangeSprite GameManager bStress1>>
 		-> ... Bub is fine.
             <<AffectionEffect GameManager 5>>
+            <<ChangeSprite GameManager happy>>
 			Spring: Yippee!! I knew you would come around!
 			Spring: Welcome to the world, Bub!
 
 Spring: I'm really excited to get to know you more!
 Spring: ...
+<<ChangeSprite GameManager thinking>>
 Spring: ... Hmm...
+<<ChangeSprite GameManager neutral>>
 Spring: There's not much to say when you're a bubble, huh?
 
+<<ChangeSprite GameManager bStress2>>
 -> ...
 
 Spring: ...
+<<ChangeSprite GameManager sad>>
 Spring: Sorry... I'm usually pretty good at conversation... 
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
 Spring: Huh? Are you shaking?
 Spring: You don't look great. Do you want me to get you anything?
-<<BlackBackground GameManager on>>
+<<BlackBackground GameManager on>>  
 Spring: Bub? Bub!!??
+
+<b><i>P O P</b></i>
+
+...
 
 <<jump SecondLoop>>
 ===
