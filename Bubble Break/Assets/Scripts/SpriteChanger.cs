@@ -7,6 +7,9 @@ using Yarn.Unity;
 
 public class SpriteChanger : MonoBehaviour
 {
+    
+    private string curr;
+
     //Images in the canvas
     public Image spring;
     public Image diaImg;
@@ -38,8 +41,6 @@ public class SpriteChanger : MonoBehaviour
     public Sprite narr;
     
 
-
-    private string curr;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +79,7 @@ public class SpriteChanger : MonoBehaviour
                 spring.sprite = thinking;
                 break;
             }
-            case "digust":
+            case "disgust":
             {
                 spring.sprite = disgust;
                 break;

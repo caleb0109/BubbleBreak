@@ -1,6 +1,5 @@
-﻿title: SecondLoop
+﻿title: SecondLoopFirstTime
 ---
-<<declare $stressDead to 0>>
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
 <<BlackBackground GameManager on>>
@@ -10,138 +9,238 @@ Maybe ask more questions... y'know, give her something to work with!
 Look! Another bubble!
 Lets try again, yeah?
 <<BlackBackground GameManager off>>
-
+<<AffectionEffect GameManager 0>>
+<<jump SecondLoop>>
+===
+title: SecondLoop
+---
 <<ChangeSprite GameManager normal>>
 Spring: ...
 Spring: ... Is that you, Bub?
 <<ChangeSprite GameManager happy>>
 Spring: I can't believe it!! You're back!!
+<<ChangeSprite GameManager sad>>
 Spring: I was worried sick! You just popped out of nowhere, I thought I would never see you again...
+<<ChangeSprite GameManager neutral>>
 Spring: Do you know how you came back?
 
 -> I just kinda... did.
+	<<ChangeSprite GameManager thinking>>
 	Spring: Woah... I wonder if I'll come back if I pop...
 -> I don't know, but I'm glad I'm back.
 	//raise affection 10
+	<<AffectionEffect GameManager 10>>
+	<<ChangeSprite GameManager happy>>
 	Spring: I'm glad you're back, too.
 
-// <<$stressDead = <<StressEffect GameManager 100>>>>
-// <<if $stressDead <1>>>
-//     <<jump TestStressOver>>
-// <<endif>>
-
+<<ChangeSprite GameManager neutral>>
 Spring: ...
+<<ChangeSprite GameManager thinking>>
 Spring: Hmm...
 
 -> Do you know how long you've been here?
 	Spring: Mmm... A month, I think?
+	<<ChangeSprite GameManager neutral>>
 	Spring: I can see the sun go up and down from the window!
 	Spring: I've seen it go up one, two, three.....
+	<<ChangeSprite GameManager thinking>>
 	Spring: ...
+	<<ChangeSprite GameManager happy>>
 	Spring: Five times!!
 		-> So, less than a week?
+			<<ChangeSprite GameManager thinking>>
 			Spring: ...
 			//raise affection 10
+			<<AffectionEffect GameManager 10>>
+			<<ChangeSprite GameManager neutral>>
 			Spring: Oh! I guess you're right!
 			Spring: It feels like a long time when you don't see anyone.
 		-> Right... a month...
 			//lower affection 10, raise stress
+			<<AffectionEffect GameManager -10>>
+			<<StressEffect GameManager 33>>
+			<<ChangeSprite GameManager sad>>
 			Spring: !!!
 			Spring: Haha... It feels like a while when you don't see anyone...
 -> You've really never seen anyone else?
+	<<ChangeSprite GameManager neutral>>
 	Spring: Nope! Just you!
+	<<ChangeSprite GameManager disgust>>
 	Spring: Why, are you doubting me?
 		-> Not at all!
+			<<ChangeSprite GameManager neutral>>
 			Spring: Ahaha! It's ok!! You probably should, if I'm being honest.
 			Spring: I don't have the best memory, but I am pretty confident about my answer!
+			<<ChangeSprite GameManager thinking>>
 			Spring: I think I would remember if I had another conversation.
 		-> Yeah.
 			//raise affection 10
+			<<AffectionEffect GameManager 10>>
+			<<ChangeSprite GameManager happy>>
 			Spring: Ahaha!! You're right about that!
 			Spring: Do you have a good memory? Maybe you can keep me in check.
 -> ...
 	//lower affection 10, raise stress
+	<<AffectionEffect GameManager -10>>
+	<<StressEffect GameManager 33>>
+	<<ChangeSprite GameManager disgust>>
 	Spring: Uhh...
 
+<<ChangeSprite GameManager neutral>>
 Spring: There's not a lot to do when you're a bubble.
 Spring: I like to slip and slide around the sink! But that's kinda it.
+<<ChangeSprite GameManager happy>>
 Spring: I reached the faucet once, though! How cool is that!!
 	-> Awesome!
 		Spring: Hehe! Yeah, I get that a lot!
 			-> By who?
+				<<ChangeSprite GameManager disgust>>
 				Spring: Uh... the mirror.....
 			-> I can tell!
 				//raise affection 20
+				<<AffectionEffect GameManager 20>>
+				<<ChangeSprite GameManager happy>>
 				Spring: D'aww! You get me so well!!
 	-> Cool...?
 		//lower affection 10, raise stress 
+		<<AffectionEffect GameManager -10>>
+		<<StressEffect GameManager 33>>
+		<<ChangeSprite GameManager disgust>>
 		Spring: It <b>is</b> cool! Don't look at me like that!
 		Spring: You get bored here, alright! You try figuring out how to spend your time here!
 	-> How did you even do that?
 		//raise affection 10
+		<<AffectionEffect GameManager 10>>
 		Spring: I just kept gaining momentum!
 		Spring: It was super tiring, but well worth it! I even got to see all the stuff up there!
+		<<ChangeSprite GameManager neutral>>
 		Spring: There was peppermint toothpaste, facial cleanser, moisturizer... but no floss! Gross, right?
+		<<ChangeSprite GameManager disgust>>
 		Spring: I really pity their dentist.
 
+<<ChangeSprite GameManager neutral>>
 Spring: There were a few times where I thought I would pop, but I'm still here.
-Spring: Like, when someone comes by to wash their hands or brush their teeth, I'm always terrified the running water will pop me...
+Spring: Like, when someone comes by to wash their hands or brush their teeth.
+<<ChangeSprite GameManager sad>>
+Spring: I'm always terrified the running water will pop me...
+<<ChangeSprite GameManager happy>>
 Spring: But it never happens!!
+<<ChangeSprite GameManager thinking>>
 Spring: I wonder why...
 	-> Every bubble will pop eventually.
-		//lower affection 10, raise stress 
+		//lower affection 10, raise stress
+		<<AffectionEffect GameManager -10>>
+		<<StressEffect GameManager 34>> 
+		<<ChangeSprite GameManager sad>>
 		Spring: You're right... I have to spend my time wisely, huh.
+		<<ChangeSprite GameManager neutral>>
 		Spring: Especially now that you're here! I would hate to pop now that I have a friend!!
+		<<ChangeSprite GameManager sad>>
 		Spring: At least you seem to come back when you pop... Lucky...
+		<<if stress_pop()>>
+			<<jump Loop2StressFail>>
+		<<endif>>
 	-> Do you want to get popped?
+		<<ChangeSprite GameManager neutral>>
 		Spring: No! I'm enjoying my bubbble life so far!
+		<<ChangeSprite GameManager sad>>
 		Spring: It's kinda spooky, though. Especially when the sun goes down.
 		Spring: It's pitch black, and I can barely sleep because I keep hearing squeaking and skittering!
+		<<ChangeSprite GameManager disgust>>
 		Spring: They should really invest in some mice traps.
+		<<ChangeSprite GameManager neutral>>
 		Spring: ...
+		<<ChangeSprite GameManager blush>>
 		Spring: I'm really glad I met you, Bub.
 			-> Me too.
 				//raise affection 20
+				<<AffectionEffect GameManager 20>>
 				Spring: Hehe...
 			-> Thanks.
+				<<ChangeSprite GameManager neutral>>
 				Spring: Yeah!
 	-> I guess you're too powerful...
 		//raise affection 10
+		<<ChangeSprite GameManager happy>>
+		<<AffectionEffect GameManager 10>>
 		Spring: You're right... Curse my super strength...
 		Spring: I bet we can have the cleanest high five and I'll still be here! Ahaha!
+
+	<<if affection_check()>>
+		<<jump Loop2Success>>
+	<<endif>>
+	<<jump Loop2AffectionFail>>
 ===
 
 title: Loop2Success
 ---
+<<ChangeSprite GameManager neutral>>
 Spring: Oh look! The sun's coming down.
+<<ChangeSprite GameManager happy>>
 Spring: Y'know... I had a lot of fun today. It's been a while since I really enjoyed myself in this sink.
+<<ChangeSprite GameManager neutral>>
 Spring: Can we talk again tomorrow?
 	-> Of course
+		<<ChangeSprite GameManager happy>>
 		Spring: Yay! I don't know if I can sleep tonight!
 	-> We'll see.
+		<<ChangeSprite GameManager happy>>
 		Spring: Hehe. Well regardless, you're stuck with me until you pop!
+
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
 Spring: ??
 Spring: Oh, no... Not again!
 Spring: Wait!! Don't leave me again!!
 Spring: Promise me you'll come back?
+<b><i>P O P</b></i>
+...
 
 ===
 
 title: Loop2StressFail
 ---
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
 Spring: Are you feeling alright?
 Spring: Oh no... This again...
 Spring: You'll come back again, right? Right??
-
+<b><i>P O P</b></i>
+...
+<<BlackBackground GameManager on>> 
+<<jump Loop2Fail>>
 ===
 
 title: Loop2AffectionFail
 ---
+<<ChangeSprite GameManager thinking>>
 Spring: Hmm....
 Spring: ... 
+<<ChangeSprite GameManager neutral>>
 Spring: Ahaha... I guess I really am bad at conversations, huh...
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
 Spring: Huh? You're shaking, are you feeling alright?
 Spring: Oh no... This again...
 Spring: You'll come back again, right? Right??
-
+<b><i>P O P</b></i>
+...
+<<jump Loop2Fail>>
 ===		
+
+title:Loop2Fail
+---
+<<AllReset GameManager>>
+<<ChangeSprite GameManager bNeutral>>
+<<ChangeSprite GameManager neutral>>
+<<BlackBackground GameManager on>>
+<<ChangeSprite GameManager narr>>
+You really fumbled that one.
+The more you get to know her, her affection for you will go up!
+Try to get the affection bar above halfway and maybe she'll open up more?
+Just remember to be careful with your words, otherwise you'll get too stressed and pop!
+Look! Another bubble!
+Lets try again, yeah?
+<<BlackBackground GameManager off>>
+<<jump SecondLoop>>
+===

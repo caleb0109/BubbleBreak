@@ -107,10 +107,14 @@ Spring: Huh? Are you shaking?
 Spring: You don't look great. Do you want me to get you anything?
 <<BlackBackground GameManager on>>  
 Spring: Bub? Bub!!??
-
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
 <b><i>P O P</b></i>
-
+<<NextScene GameManager end>>
+<<BlackBackground GameManager on>> 
 ...
 
-<<jump SecondLoop>>
+
+
+<<jump SecondLoopFirstTime>>
 ===

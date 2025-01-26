@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
 
-public class IntroScene : MonoBehaviour
+public class SceneManage : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
+    private string nScene;
 
     public Image cutScene;
     public Sprite cut1;
     public Sprite cut2;
     public Sprite cut3;
     public Sprite cut4;
+    public Sprite cut5;
     //public float timeToFade;
     
-    private string nScene;
+
     // private bool fadeIn = false;
     // private bool fadeOut = false;
 
@@ -88,6 +90,12 @@ public class IntroScene : MonoBehaviour
                 cutScene.sprite = cut4;
                 break;
 
+            }
+            case "cut5":
+            {
+                cutScene.enabled = true;
+                cutScene.sprite = cut5;
+                break;
             }
             default:
             {
