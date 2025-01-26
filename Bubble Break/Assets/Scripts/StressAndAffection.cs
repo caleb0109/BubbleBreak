@@ -9,11 +9,13 @@ public class StressAndAffection : MonoBehaviour
     public int affection = 0;
     public AffectionBar affBar;
     public StageSet stage;
+    int hi = 0;
 
     private int stage2Check = 50;
     private int stage3Check = 100;
 
-    public void StressEffect (int add )
+    [YarnCommand("StressEffect")]
+    public int StressEffect (int add )
     {
         stress += add;
         if(stress <= 0)
@@ -25,7 +27,10 @@ public class StressAndAffection : MonoBehaviour
             stress = 0;
             affection = 0;
             stage.StageReset();
+            hi = 1;
+            return hi;
         }
+        return hi;
     } 
 
     [YarnCommand("AffectionEffect")]
@@ -33,7 +38,10 @@ public class StressAndAffection : MonoBehaviour
     {
         affection += add;
         affBar.curr = affection;
-        //affBar.ShowBar();
+        if(affBar.bar.enabled == false)
+        {
+            affBar.ShowBar();
+        }
         Debug.Log("yes");
     }
 

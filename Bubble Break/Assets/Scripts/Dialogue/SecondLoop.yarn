@@ -1,5 +1,6 @@
 ﻿title: SecondLoop
 ---
+<<declare $stressDead to 0>>
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
 <<BlackBackground GameManager on>>
@@ -23,6 +24,11 @@ Spring: Do you know how you came back?
 -> I don't know, but I'm glad I'm back.
 	//raise affection 10
 	Spring: I'm glad you're back, too.
+
+// <<$stressDead = <<StressEffect GameManager 100>>>>
+// <<if $stressDead <1>>>
+//     <<jump TestStressOver>>
+// <<endif>>
 
 Spring: ...
 Spring: Hmm...

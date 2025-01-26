@@ -226,6 +226,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &155260978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1403292937419079771, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
+  m_PrefabInstance: {fileID: 2796145488655117183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &642058534
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +318,7 @@ MonoBehaviour:
   maxBar: 100
   curr: 0
   mask: {fileID: 152151251}
+  bar: {fileID: 155260978}
 --- !u!114 &642058539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +341,7 @@ MonoBehaviour:
   happy: {fileID: 21300000, guid: 0a29f312517eff4449ccdb6c0e2b19e5, type: 3}
   thinking: {fileID: 21300000, guid: ee60b64fe331ef34a9206de63094fb4c, type: 3}
   disgust: {fileID: 21300000, guid: 11e0cc7b4767580489ce21ff1ae4d1f7, type: 3}
+  worry: {fileID: 21300000, guid: 43a809c3afbac714a91ebc1e1e9f9ca8, type: 3}
   exclamation: {fileID: 21300000, guid: 32259de1d0f463549a796c1de9111dda, type: 3}
   question: {fileID: 21300000, guid: b7d5837b5f5c31a42a7bd656428fca03, type: 3}
   normal: {fileID: 21300000, guid: 7b886d6cd49adb24fa2d49c8cf024a28, type: 3}
@@ -356,7 +369,6 @@ MonoBehaviour:
   cut2: {fileID: 21300000, guid: c56e3c45ab3ef004997e2fa59b8738d7, type: 3}
   cut3: {fileID: 21300000, guid: 9a60fe3cf23289046abd25b60a328d9e, type: 3}
   cut4: {fileID: 21300000, guid: 3a6f95c2b5ae37a48959aa1bfb84555b, type: 3}
-  timeToFade: 2
 --- !u!1 &718824173
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,16 +401,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 26880f74aee7f704390adb6a04f6d085, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -984,10 +996,10 @@ PrefabInstance:
       addedObject: {fileID: 2692354580978739406}
     - targetCorrespondingSourceObject: {fileID: 471789249976292226, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 819606216}
+      addedObject: {fileID: 718824176}
     - targetCorrespondingSourceObject: {fileID: 471789249976292226, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
       insertIndex: 5
-      addedObject: {fileID: 718824176}
+      addedObject: {fileID: 819606216}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079a0ebc2f96dab4aa9b85ba52b9c5e5, type: 3}
 --- !u!114 &9142954252311936846 stripped

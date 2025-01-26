@@ -10,6 +10,7 @@ public class AffectionBar : MonoBehaviour
     public int maxBar = 100;
     public int curr = 0;
     public Image mask;
+    public Image bar;
 
     // Update is called once per frame
     private void Update()
@@ -22,9 +23,9 @@ public class AffectionBar : MonoBehaviour
         float fillAmount = (float)curr/ (float)maxBar;
         mask.fillAmount = fillAmount;
     }
-    // public void ShowBar()
-    // {
-    //     mask.gameObject.SetActive(true);
-    //     //mask.SetActive(true);
-    // }
+    public void ShowBar()
+    {
+        bar.enabled = true;
+        //mask.SetActive(true);
+    }
 }
