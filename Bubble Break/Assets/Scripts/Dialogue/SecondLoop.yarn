@@ -1,5 +1,9 @@
 ﻿title: SecondLoopFirstTime
 ---
+
+<<declare $timeChoice = false>>
+<<declare $flossChoice = false>>
+
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
 <<BlackBackground GameManager on>>
@@ -39,6 +43,7 @@ Spring: ...
 Spring: Hmm...
 
 -> Do you know how long you've been here?
+	<<set $timeChoice = true>>
 	Spring: Mmm... A month, I think?
 	<<ChangeSprite GameManager neutral>>
 	Spring: I can see the sun go up and down from the window!
@@ -110,6 +115,7 @@ Spring: I reached the faucet once, though! How cool is that!!
 		Spring: You get bored here, alright! You try figuring out how to spend your time here!
 	-> How did you even do that?
 		//raise affection 10
+		<<set $flossChoice = true>>
 		<<AffectionEffect GameManager 10>>
 		Spring: I just kept gaining momentum!
 		Spring: It was super tiring, but well worth it! I even got to see all the stuff up there!
@@ -191,9 +197,13 @@ Spring: Can we talk again tomorrow?
 Spring: ??
 Spring: Oh, no... Not again!
 Spring: Wait!! Don't leave me again!!
+<<BlackBackground GameManager on>>
 Spring: Promise me you'll come back?
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
 ...
+<<jump ThirdLoopFirstTime>>
+
 
 ===
 
@@ -203,10 +213,10 @@ title: Loop2StressFail
 <<ChangeSprite GameManager worry>>
 Spring: Are you feeling alright?
 Spring: Oh no... This again...
+<<BlackBackground GameManager on>> 
 Spring: You'll come back again, right? Right??
 <b><i>P O P</b></i>
 ...
-<<BlackBackground GameManager on>> 
 <<jump Loop2Fail>>
 ===
 
@@ -221,6 +231,7 @@ Spring: Ahaha... I guess I really am bad at conversations, huh...
 <<ChangeSprite GameManager worry>>
 Spring: Huh? You're shaking, are you feeling alright?
 Spring: Oh no... This again...
+<<BlackBackground GameManager on>> 
 Spring: You'll come back again, right? Right??
 <b><i>P O P</b></i>
 ...
@@ -229,6 +240,10 @@ Spring: You'll come back again, right? Right??
 
 title:Loop2Fail
 ---
+
+//<<set $timeChoice = false>>
+//<<set $flossChoice = false>>
+
 <<AllReset GameManager>>
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>

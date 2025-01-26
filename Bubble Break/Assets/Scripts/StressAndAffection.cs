@@ -83,7 +83,15 @@ public class StressAndAffection : MonoBehaviour
     [YarnCommand("AllReset")]
     public void AllReset()
     {
-        affection = 0;
+        if(currStage == 3) 
+        {
+            affection = 30;
+            
+        }
+        else
+        {
+            affection = 0;
+        }
         affBar.curr = affection;
         stress = 0;
         stressCheck = false;

@@ -1,0 +1,253 @@
+﻿title: ThirdLoopFirstTime
+---
+<<AllReset GameManager>>
+Way to go, champ! She seems interested!
+One more push and maybe you'll catch her eye... Not that you have much competition.
+You know her better now, so maybe put yourself out there! Can't hurt to try, right...?
+You got this, alright?
+<<ChangeSprite GameManager bNeutral>>
+<<jump ThirdLoop>>
+===
+title: ThirdLoop
+---
+<<BlackBackground GameManager off>>
+<<ChangeSprite GameManager happy>>
+Spring: Bub? Bub!!!
+Spring: It's been a while... I really thought you might never come back!!
+<<ChangeSprite GameManager sad>>
+Spring: I got so used to having a talking buddy that it felt really lonely while you were gone.
+<<ChangeSprite GameManager happy>>
+Spring: But you're back!! Yippee!!!
+
+-> How long was I out?
+	<<ChangeSprite GameManager thinking>>
+	Spring: You were out for a week!
+		-> So... maybe two days? <<if $timeChoice>>
+			<<ChangeSprite GameManager happy>>
+			<<AffectionEffect GameManager 20>>
+			Spring: Hey!! I did get it wrong that time, but I'm sure about this!
+			Spring: I was super attentive this time! The sun went up and down 7 whole times!
+			<<ChangeSprite GameManager blush>>
+			Spring: I wanted to be sure so I could tell you when you came back...
+			Spring: Y'know! I can't let you think I'm just some silly bubble!
+		-> A whole week, huh.
+			<<ChangeSprite GameManager sad>>
+			Spring: Yup! Slipping and sliding gets really boring after a week.
+			<<ChangeSprite GameManager worry>>
+			Spring: I almost slipped out of the sink! I could've popped!!
+			Spring: Then I wouldn't have been able to see you!			
+-> I missed you!
+	<<ChangeSprite GameManager blush>>
+	<<AffectionEffect GameManager 30>>
+	Spring: !!!
+	Spring: I... I missed you too!
+	<<ChangeSprite GameManager thinking>>
+	Spring: Wait, how can you miss me if you popped?
+	<<ChangeSprite GameManager happy>>
+	Spring: Ahaha!! That doesn't matter, I'm glad you felt the same way...!
+
+<<ChangeSprite GameManager neutral>>
+Spring: I'm really glad I got to say your name again.
+Spring: I got tired of greeting everyone around here. And you're the only one that actually says something back!
+
+-> Who's the other people?
+	Spring: There's Toothy the toothpaste, Clara the cleanser, Flafla the floss...
+		-> There's floss now? <<if $flossChoice>>
+			<<AffectionEffect GameManager 20>>
+			<<ChangeSprite GameManager happy>>
+			Spring: Yeah!! Crazy, right?
+			Spring: I was so happy when I saw it! Someone has fresh, minty breath now!
+			Spring: I'm sure Flafla is happy too!
+		-> Very... creative names...
+			<<AffectionEffect GameManager 10>>
+			<<ChangeSprite GameManager happy>>
+			Spring: Thank you! I'm pretty much a pro at this point.
+			<<ChangeSprite GameManager thinking>>
+			Spring: I've been thinking about what names I would give other bubbles that might join us one day...
+			<<ChangeSprite GameManager happy>>
+			Spring: I can't really think of anything else, though. Bub really was the best name I got!
+			Spring: You should be honored, y'know!!
+-> Why is your name Spring?
+	Spring: Because I come from spring breeze-scented soap!! Duh!!
+	Spring: Don't I remind you of fresh laundry? Moisturized hands?? Deodorized armpits???
+		-> Sounds... delightful?
+			<<ChangeSprite GameManager happy>>
+			Spring: You bet it is! And doesn't it perfectly remind you of a... certain someone...?
+				-> You?
+					<<AffectionEffect GameManager 10>>
+					Spring: D'aww!! You flatter me!!
+				-> Me?		
+					<<ChangeSprite GameManager thinking>>	
+					Spring: ...
+					<<AffectionEffect GameManager 10>>
+					<<ChangeSprite GameManager happy>>	
+					Spring: I guess you're right! You remind me of all those things!
+		-> So... what are you supposed to smell like?
+			<<ChangeSprite GameManager thinking>>
+			Spring: Y-y'know... Spring!! Breezes!!! Um...
+			Spring: ...
+			<<ChangeSprite GameManager happy>>
+			Spring: W-well, I smell great, if you're wondering.
+		-> Can I smell you?
+			<<AffectionEffect GameManager -30>>
+			<<StressEffect GameManager 66>> 
+			<<ChangeSprite GameManager disgust>>
+			Spring: Excuse me???
+			Spring: ...
+			<<ChangeSprite GameManager sad>>
+			Spring: I'll pretend I didn't hear that. For both of our sakes.
+
+
+<<ChangeSprite GameManager neutral>>
+Spring: I always wonder...
+Spring: Do you think we'll ever get out of this sink?
+	
+-> Doubt it.
+	<<AffectionEffect GameManager 10>>
+	<<ChangeSprite GameManager happy>>
+	Spring: Hehe. You're probably right.
+	Spring: Even if we try, we'll probably pop on our way out.
+-> Maybe one day.
+	<<AffectionEffect GameManager -10>>
+	<<StressEffect GameManager 34>> 
+	<<ChangeSprite GameManager sad>>
+	Spring: One day...
+	Spring: ...
+-> Of course we will.
+	<<AffectionEffect GameManager 10>>
+	<<ChangeSprite GameManager happy>>
+	Spring: So full of hope! I really have a lot to learn from you!!
+
+<<ChangeSprite GameManager thinking>>
+Spring: Well, you'll probably make it out of here...
+Spring: When you pop, you always come back! Maybe one day you'll land somewhere outside of the sink!
+Spring: Me, on the other hand...
+<<ChangeSprite GameManager sad>>
+Spring: ...
+
+-> Lets go!
+    <<AffectionEffect GameManager 30>>
+	<<if affection_check()>>
+		<<jump Loop3Success>>
+	<<endif>>
+	<<jump Loop3AffectionFail>>
+-> ...
+	//if my math is right you HAVE to pick "lets go" to go to the good ending
+	<<jump Loop3ChoiceFail>>
+===
+
+title: Loop3Success
+---
+<<ChangeSprite GameManager blush>>
+Spring: W-what!?
+Spring: You mean... right now!?!?
+Spring: ...
+<<ChangeSprite GameManager happy>>
+Spring: I would love to...!!!
+Spring: With you, Bub... I think we can go anywhere!
+Spring: To the tile floor, the bathtub... maybe even outside the window!!!
+<<ChangeSprite GameManager blush>>
+Spring: ...
+Spring: I really like you, Bub.
+Spring: D-do you feel the same...?
+	-> Yeah!
+		<<ChangeSprite GameManager happy>>
+		Spring: !!!
+        <<NextScene GameManager finale>>
+		Spring: Y-yay!! I've never felt this way before...!
+		Spring: Hehe... I hope you know you mean a lot to me!
+		Spring: Lets explore this new world... together!!!
+	-> Maybe...?
+		<<ChangeSprite GameManager thinking>>
+		Spring: Maybe?
+		<<ChangeSprite GameManager neutral>>
+		Spring: Well... that's not a no, right?
+		<<ChangeSprite GameManager happy>>
+		Spring: Ahaha! Well, regardless, I think we'll have a lot of fun!!
+Spring: C'mon! Lets get out of here!
+<<NextScene GameManager end>>
+===
+
+title: Loop3AffectionFail
+---
+<<ChangeSprite GameManager disgust>>
+Spring: Uhh... like, right now??
+<<ChangeSprite GameManager thinking>>
+Spring: ...
+<<ChangeSprite GameManager sad>>
+Spring: Sorry... I ... I don't think I can just leave like that!!
+<<ChangeSprite GameManager worry>>
+Spring: I know I haven't popped yet, but sliding off of the sink!? That's a huge risk!!
+Spring: Plus, we don't know if I can just come back like you do! 
+<<ChangeSprite GameManager sad>>
+Spring: I'm really sorry. I can't do this.
+Spring: Can't we just stay here... and talk...?
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
+Spring: No!! Not now...!!
+Spring: I just wanted to be with you more!!!
+Spring: ...
+Spring: ... please come back?
+<b><i>P O P</b></i>
+...
+<<BlackBackground GameManager on>> 
+<<jump Loop3Fail>>
+
+title: Loop3ChoiceFail
+---
+<<ChangeSprite GameManager sad>>
+Spring: Sorry, I didn't mean to be a downer...
+Spring: I just can't help but think about it! I keep trying to distract myself but...
+Spring: But.....
+<<ChangeSprite GameManager bStress3>>
+Spring: ... huh?
+<<ChangeSprite GameManager worry>>
+Spring: Oh no... wait... not now!!
+Spring: I... don't want you to remember me like this...
+Spring: Come back, pretty please?
+Spring: Lets talk about something nicer next time!
+<b><i>P O P</b></i>
+...
+<<BlackBackground GameManager on>> 
+<<jump Loop3Fail>>
+===
+
+title: Loop3StressFail
+---
+<<ChangeSprite GameManager bStress3>>
+<<ChangeSprite GameManager worry>>
+Spring: Oh no... please don't feel bad! It's fine!!
+Spring: I want to keep talking with you...
+<<ChangeSprite GameManager neutral>>
+Spring: We'll meet again though.
+<<ChangeSprite GameManager happy>>
+Spring: I'm sure of it!
+<b><i>P O P</b></i>
+...
+<<BlackBackground GameManager on>> 
+<<jump Loop3Fail>>
+===
+
+title: Loop3Fail
+---
+<<AllReset GameManager>>
+<<ChangeSprite GameManager bNeutral>>
+<<ChangeSprite GameManager neutral>>
+<<BlackBackground GameManager on>>
+<<ChangeSprite GameManager narr>>
+You messed up. Again.
+I think she's kinda into you, don't you think?
+Just go for it!! But you're not stupid enough to pick something <i>too</i> risque, right?
+It could also help to bring up some stuff you learned about her last time!
+Look! Another bubble!
+Lets try again, yeah?
+<<BlackBackground GameManager off>>
+<<jump ThirdLoop>>
+
+===
+
+
+
+
+
+
