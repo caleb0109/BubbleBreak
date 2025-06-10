@@ -52,6 +52,7 @@ public class SpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //i will change this in the future, please dont hurt me
         springObj.transform.localScale = new Vector3(1.440132f,1.440132f,1.440132f);
     }
 
