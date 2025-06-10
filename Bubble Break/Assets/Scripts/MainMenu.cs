@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Image settingMenu;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            settingMenu.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -17,9 +22,17 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
-        public void QuitGame()
+
+    public void QuitGame()
     {
         Application.Quit();
         Debug.Log("You quit the game!");
     }
+
+    public void SettingsMenu()
+    {
+        settingMenu.enabled = true;
+    }
+
+
 }

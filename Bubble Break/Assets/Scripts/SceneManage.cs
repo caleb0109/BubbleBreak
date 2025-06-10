@@ -15,6 +15,8 @@ public class SceneManage : MonoBehaviour
     public Sprite cut3;
     public Sprite cut4;
     public Sprite cut5;
+    public Sprite cutEnd;
+    public Sprite theEnd;
     //public float timeToFade;
     
 
@@ -95,6 +97,18 @@ public class SceneManage : MonoBehaviour
             {
                 cutScene.enabled = true;
                 cutScene.sprite = cut5;
+                break;
+            }
+            case "finale":
+            {
+                cutScene.enabled = true;
+                cutScene.sprite = cutEnd;
+                break;
+            }
+            case "end":
+            {
+                cutScene.enabled = true;
+                cutScene.sprite = theEnd;
                 break;
             }
             default:

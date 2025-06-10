@@ -1,5 +1,9 @@
 ﻿title: SecondLoopFirstTime
 ---
+
+<<declare $timeChoice = false>>
+<<declare $flossChoice = false>>
+
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
 <<BlackBackground GameManager on>>
@@ -9,6 +13,7 @@ Maybe ask more questions... y'know, give her something to work with!
 Look! Another bubble!
 Lets try again, yeah?
 <<BlackBackground GameManager off>>
+<<NextScene GameManager off>>
 <<AffectionEffect GameManager 0>>
 <<jump SecondLoop>>
 ===
@@ -39,6 +44,7 @@ Spring: ...
 Spring: Hmm...
 
 -> Do you know how long you've been here?
+	<<set $timeChoice = true>>
 	Spring: Mmm... A month, I think?
 	<<ChangeSprite GameManager neutral>>
 	Spring: I can see the sun go up and down from the window!
@@ -110,11 +116,14 @@ Spring: I reached the faucet once, though! How cool is that!!
 		Spring: You get bored here, alright! You try figuring out how to spend your time here!
 	-> How did you even do that?
 		//raise affection 10
+		<<set $flossChoice = true>>
 		<<AffectionEffect GameManager 10>>
 		Spring: I just kept gaining momentum!
-		Spring: It was super tiring, but well worth it! I even got to see all the stuff up there!
+		Spring: It was super tiring, but well worth it!
+        Spring: I even got to see all the stuff up there!
 		<<ChangeSprite GameManager thinking>>
-		Spring: There was peppermint toothpaste, facial cleanser, moisturizer... but no floss! Gross, right?
+		Spring: There was peppermint toothpaste, facial cleanser, moisturizer... 
+        Spring: but no floss! Gross, right?
 		Spring: I really pity their dentist.
 
 <<ChangeSprite GameManager neutral>>
@@ -191,9 +200,16 @@ Spring: Can we talk again tomorrow?
 Spring: ??
 Spring: Oh, no... Not again!
 Spring: Wait!! Don't leave me again!!
+<<BlackBackground GameManager on>>
 Spring: Promise me you'll come back?
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
+<<BlackBackground GameManager on>>
 ...
+<<jump ThirdLoopFirstTime>>
+
 
 ===
 
@@ -203,10 +219,14 @@ title: Loop2StressFail
 <<ChangeSprite GameManager worry>>
 Spring: Are you feeling alright?
 Spring: Oh no... This again...
-Spring: You'll come back again, right? Right??
-<b><i>P O P</b></i>
-...
 <<BlackBackground GameManager on>> 
+Spring: You'll come back again, right? Right??
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
+<b><i>P O P</b></i>
+<<BlackBackground GameManager on>>
+...
 <<jump Loop2Fail>>
 ===
 
@@ -221,14 +241,23 @@ Spring: Ahaha... I guess I really am bad at conversations, huh...
 <<ChangeSprite GameManager worry>>
 Spring: Huh? You're shaking, are you feeling alright?
 Spring: Oh no... This again...
+<<BlackBackground GameManager on>> 
 Spring: You'll come back again, right? Right??
+<<BlackBackground GameManager off>>
+<<NextScene GameManager cut5>>
+<<ChangeSprite GameManager narr>>
 <b><i>P O P</b></i>
+<<BlackBackground GameManager on>> 
 ...
 <<jump Loop2Fail>>
 ===		
 
 title:Loop2Fail
 ---
+
+//<<set $timeChoice = false>>
+//<<set $flossChoice = false>>
+
 <<AllReset GameManager>>
 <<ChangeSprite GameManager bNeutral>>
 <<ChangeSprite GameManager neutral>>
@@ -236,10 +265,12 @@ title:Loop2Fail
 <<ChangeSprite GameManager narr>>
 You really fumbled that one.
 The more you get to know her, her affection for you will go up!
-Try to get the affection bar above halfway and maybe she'll open up more?
-Just remember to be careful with your words, otherwise you'll get too stressed and pop!
+Try to get the affection bar above halfway! Maybe she'll open up more?
+Just remember to be careful with your words,
+otherwise you'll get too stressed and <b><i>pop</i></b>!
 Look! Another bubble!
 Lets try again, yeah?
 <<BlackBackground GameManager off>>
+<<NextScene GameManager off>>
 <<jump SecondLoop>>
 ===
